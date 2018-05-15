@@ -7,6 +7,7 @@ class HttpRequestRawStringParser:
     def __init__(self, requestRawString,delimiter='\r\n'):
         self.requestRawString = requestRawString
         self.delimiter = delimiter
+        self.requestLine = self.getRequestLine()
 
     def getRequestLine(self):
         index = self.requestRawString.find(self.delimiter)
